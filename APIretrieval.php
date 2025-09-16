@@ -14,7 +14,7 @@
 
     echo $data['standings'][0]['table'][0]['team']['name'];
 
-
+    //dfsknsd
     
 
 $teams = [64, 61, 57, 73, 62, 71, 1044, 354, 66, 351, 
