@@ -37,18 +37,28 @@ CREATE TABLE players(
 CREATE TABLE games(
     matchday INT,
     match_id INT PRIMARY KEY,
-    home_team INT,
-    away_team INT,
+    home_team VARCHAR(50),
+    away_team VARCHAR(50),
     match_date TIMESTAMP,
     home_score INT,
     away_score INT,
     home_score_firsthalf INT,
     away_score_firsthalf INT,
     match_status VARCHAR(20),
-    referee VARHAR(60),
+    referee VARCHAR(60),
     home_team_id INT,
     away_team_id INT,
     winner VARCHAR(20),
     FOREIGN KEY (home_team_id) REFERENCES teams(team_id),
     FOREIGN KEY (away_team_id) REFERENCES teams(team_id)
+)
+
+CREATE TABLE topScorers(
+    player_id INT,
+    goals INT,
+    assists INT,
+    penalties INT,
+    games INT,
+
+    FOREIGN KEY (player_id) REFERENCES players(player_id)
 )

@@ -1,13 +1,13 @@
 <?php
     echo 'AASDHABHCBAEJHCBAEEEEEEEEEEEEEEEEEEEEEEEEEEEKH';
 
-    //$uri = 'https://api.football-data.org/v4/competitions/PL/matches?matchday=1';
-    //$reqPrefs['http']['method'] = 'GET';
-    //$reqPrefs['http']['header'] = 'X-Auth-Token: 6b7c016d1bd54d7683d4a1f5ec148dcb';
-    //$stream_context = stream_context_create($reqPrefs);
-    //$response = file_get_contents($uri, false, $stream_context);
-    //$data = json_decode($response, true);
-    //var_dump($data);
+    $uri = 'https://api.football-data.org/v4/competitions/PL/scorers';
+    $reqPrefs['http']['method'] = 'GET';
+    $reqPrefs['http']['header'] = 'X-Auth-Token: 6b7c016d1bd54d7683d4a1f5ec148dcb';
+    $stream_context = stream_context_create($reqPrefs);
+    $response = file_get_contents($uri, false, $stream_context);
+    $data = json_decode($response, true);
+    var_dump($data);
 
     $conn = new mysqli("localhost", "root", "", "soccerdb");
     if ($conn->connect_error) {
@@ -31,8 +31,11 @@ $secondHalf = array_slice($teams, $mid);
 
 //getPlayerData($teams, $conn);
 
-halfMatches(1, $conn);
-//halfMatches(20, $conn);
+//halfMatches(1, $conn);
+//halfMatches(18, $conn);
+//halfMatches(35, $conn);
+
+getScorers($conn);
 
 
 
@@ -148,7 +151,6 @@ function halfTeamData($arr, $half, $conn){
 }
 
 
-
 function getPlayerData($arr, $conn){
     foreach($arr as $id){
 
@@ -201,7 +203,7 @@ function getPlayerData($arr, $conn){
 
 function halfMatches($initial, $conn){
 
-    for($i=$initial; $i<=19+$initial; $i++){
+    for($i=$initial; $i<=38; $i++){
         echo '<br>';
         echo '<br>';
 
@@ -228,11 +230,11 @@ function halfMatches($initial, $conn){
             echo $match['awayTeam']['name'];
             $awayteam = $match['awayTeam']['name'];
             echo '<br>';
-            echo $match['homeTeam']['id'];
-            $homeID = $match['homeTeam']['name'];
+            echo $match['homeTeam']['id'] . ' ID';
+            $homeID = $match['homeTeam']['id'];
             echo '<br>';
-            echo $match['awayTeam']['id'];
-            $awayID = $match['awayTeam']['name'];
+            echo $match['awayTeam']['id'] . ' ID';
+            $awayID = $match['awayTeam']['id'];
             echo '<br>';
 
             $score = $match['score'];
@@ -296,6 +298,57 @@ function halfMatches($initial, $conn){
 
     }
 
+}
+
+
+function getScorers($conn){
+    $reqPrefs['http']['method'] = 'GET';
+    $reqPrefs['http']['header'] = 'X-Auth-Token: 6b7c016d1bd54d7683d4a1f5ec148dcb';
+    $stream_context = stream_context_create($reqPrefs);
+    $uri = 'https://api.football-data.org/v4/competitions/PL/scorers';
+    $response = file_get_contents($uri, false, $stream_context);
+    $data = json_decode($response, true);
+    var_dump($data);
+
+    foreach($data['scorers'] as $player){
+
+        $player_id = $player['player']['id'];
+        echo $player_id;
+        echo '<br>';
+
+        $goals = $player['goals'];
+        echo $goals;
+        echo '<br>';
+
+        $assists = $player['assists'];
+        echo $assists;
+        echo '<br>';
+
+        $penalties = $player['penalties'];
+        echo $penalties;
+        echo '<br>';
+
+        $games = $player['playedMatches'];
+        echo $games;
+        echo '<br>';
+
+        $sql = "INSERT INTO topScorers
+            (player_id, goals, assists, penalties, games)
+            VALUES
+            ('$player_id', '$goals', '$assists', '$penalties', '$games')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+        echo '<br>';
+        echo '<br>';
+        echo '<br>';
+
+
+    }
 }
 
 ?>
