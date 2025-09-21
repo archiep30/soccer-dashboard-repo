@@ -62,3 +62,5 @@ CREATE TABLE topScorers(
 
     FOREIGN KEY (player_id) REFERENCES players(player_id)
 )
+
+DESCRIBE 
