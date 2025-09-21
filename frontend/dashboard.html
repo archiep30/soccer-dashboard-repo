@@ -7,20 +7,380 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-900 text-cyan-50 flex flex-col place-items-center">
-  <div class="p-6 flex flex-col align-middle justify-center bg-black">
-    <h1 class="text-3xl font-bold self-center">Premier League Dashboard 2025</h1>
-    <p class="mt-2 text-white-600 self-center">Track teams, matches, and players.</p>
-  </div>
-  <div class="bg-red-600 flex flex-row -space-x-1">
-    <div>
-      left
+<body class="">
+  <div class="bg-slate-950 text-cyan-50 flex flex-col place-items-center h-screen w-screen p-2 ">
+
+    <div class="p-6 flex flex-row align-middle justify-center bg-slate-900 rounded-3xl shadow-black shadow-xl w-11/12 m-2">
+
+    <div class="flex flex-col justify-center">
+      <img class="h-20 rounded-md items-center align-middle justify-center" src="premierleaguelogoimages.jpg">
     </div>
-    <div>
-      middle
+
+      <div class="p-6 flex flex-col align-middle justify-center flex-1">
+        <h1 class="text-3xl font-bold self-center">Premier League Dashboard 2025/2026</h1>
+        <p class="mt-2 text-white-600 self-center">Track teams, matches, and players throughout the 25/26 season.</p>
+      </div>
+
+      <div class="flex-[.5] flex justify-center items-center">
+        <form action="/search" class="text-center text-2xl w-full ">
+          <input class="bg-slate-950 rounded-xl border-gray-400 border-solid border-2 p-6" inputmode="search" placeholder="search players">
+        </form>
+      </div>
+
     </div>
-    <div>
-      right
+
+    <div class=" flex flex-row flex-1 justify-between w-full h-full p-2 overflow-auto">
+
+      <div class="flex-[1] m-4 bg-slate-900 rounded-3xl shadow-black shadow-2xl">
+        <h3 class="text-center text-2xl m-2 font-semibold">Top Scorers</h3>
+      </div>
+
+      <div class="flex-[2] flex flex-col m-4 bg-slate-900 rounded-3xl shadow-black shadow-2xl max-h-* overflow-hidden">
+        <h3 class="text-center text-2xl m-2 font-semibold">Standings</h3>
+        
+
+        <div class="flex flex-row justify-between ml-9 mr-5">
+              <span class="w-6 text-right mr-4"></span>
+
+              <p class="flex-1 text-center"></p>
+              <p class="flex-1 text-center">Name</p>
+              <p class="flex-1 text-center">Points</p>
+              <p class="flex-1 text-center">Wins</p>
+              <p class="flex-1 text-center">Losses</p>
+              <p class="flex-1 text-center">Draws</p>
+              <p class="flex-1 text-center">GD</p>
+        </div>
+
+        <ol class="ml-6 mr-2 overflow-y-scroll flex-grow scroll-smooth mb-4
+          [&::-webkit-scrollbar]:w-2
+        dark:[&::-webkit-scrollbar-track]:bg-slate-700
+        dark:[&::-webkit-scrollbar-thumb]:bg-slate-500">
+          <li class="m-3 bg-slate-950 text-yellow-500">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">1.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950 text-gray-400">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">2.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+          <li class="m-3 bg-slate-950 text-orange-900">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">3.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">4.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">5.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">6.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">7.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">8.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">9.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">10.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">11.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">12.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">13.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">14.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">15.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">16.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">17.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950 text-rose-600">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">18.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950 text-rose-600">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">19.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+
+          <li class="m-3 bg-slate-950 text-rose-600">
+            <div class="flex flex-row justify-between">
+              <span class="w-6 text-right mr-4">20.</span>
+              <div class="flex-1 text-center">
+                <img class="h-5 rounded-md items-center align-middle justify-center flex-1" src="premierleaguelogoimages.jpg">
+              </div>
+              <p class="flex-1 text-center">Chelsea</p>
+              <p class="flex-1 text-center"> 30</p>
+              <p class="flex-1 text-center">10</p>
+              <p class="flex-1 text-center">2 </p>
+              <p class="flex-1 text-center">1 </p>
+              <p class="flex-1 text-center">+8</p>
+            </div>
+          </li>
+          
+
+
+        </ol>
+      </div>
+
+      <div class="flex-[1.2] flex flex-col bg-slate-900 rounded-3xl m-4 shadow-black shadow-2xl">
+        <h3 class="text-center text-2xl m-2 font-semibold">Fixtures</h3>
+        <div class="bg-red-400">
+          <ul>
+            <li>
+              sad
+            </li>
+            <li>
+              sad
+            </li>
+            <li>
+              sad
+            </li>
+            <li>
+              sad
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white">
+
+        </div>
+      </div>
+
     </div>
   </div>
 </body>
