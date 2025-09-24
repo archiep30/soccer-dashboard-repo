@@ -1,4 +1,18 @@
 -- Active: 1757634405710@@127.0.0.1@3306@soccerdb
+
+DROP TABLE topscorers;
+DROP TABLE games;
+DROP Table players;
+DROP Table teams;
+
+
+TRUNCATE TABLE players;
+TRUNCATE TABLE games;
+TRUNCATE TABLE teams;
+TRUNCATE TABLE topscorers;
+
+SELECT * FROM topscorers;
+
 CREATE TABLE teams(
     team_id INT PRIMARY KEY,
     team_name VARCHAR(100),
@@ -17,9 +31,6 @@ CREATE TABLE teams(
     matchday INT
 )
 
-DROP TABLE players;
-DROP TABLE games;
-TRUNCATE TABLE teams;
 CREATE TABLE players(
     player_id INT PRIMARY KEY,
     player_name VARCHAR(100),

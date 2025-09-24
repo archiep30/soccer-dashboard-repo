@@ -34,7 +34,7 @@ function Dashboard() {
 
       <div class="flex flex-[1] flex-col">
 
-        <div class="flex-1 m-4 bg-slate-900 rounded-3xl shadow-black shadow-2xl overflow-hidden h-full">
+        <div class="flex-1  flex flex-col m-4 bg-slate-900 rounded-3xl shadow-black shadow-2xl overflow-hidden">
                 <h3 class="text-center text-2xl m-2 font-semibold">Top Scorers</h3>
 
                 <div class=" flex flex-row justify-between mr-2">
@@ -104,7 +104,7 @@ function Dashboard() {
               <span class="w-6 text-right mr-4"></span>
 
               <p class="flex-1 text-center"></p>
-              <p class="flex-1 text-center">Name</p>
+              <p class="flex-1 text-center">Team</p>
               <p class="flex-1 text-center">Points</p>
               <p class="flex-1 text-center">Wins</p>
               <p class="flex-1 text-center">Losses</p>
@@ -118,8 +118,8 @@ function Dashboard() {
 
       <div class="flex-[1.2] flex flex-col bg-slate-900 rounded-3xl m-4 shadow-black shadow-2xl overflow-hidden">
         <h3 class="text-center text-2xl m-2 font-semibold">
-          <button class="bg-slate-950 text-md text-gray-8 border-gray-400 border-solid border-2">Fixtures</button>
-          <button class="bg-gray-300 text-md text-gray-600">Results</button>
+          <button class="bg-slate-950 text-md text-gray-8 border-gray-400 border-solid border-2 mr-2">Fixtures</button>
+          <button class="bg-gray-300 text-md text-gray-600 ml-2">Results</button>
         </h3>
 
               <Fixtures />

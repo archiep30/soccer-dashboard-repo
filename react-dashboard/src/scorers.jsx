@@ -1,6 +1,6 @@
 function Scorers(){
     return (
-        <ol class="flex-1 ml-1 mr-1 overflow-y-scroll flex-grow scroll-smooth mb-4 h-full pb-20
+        <ol class="flex-1 ml-1 mr-1 overflow-y-scroll flex-grow scroll-smooth mb-5 h-full
                   [&::-webkit-scrollbar]:w-2
                 dark:[&::-webkit-scrollbar-track]:bg-slate-700
                 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500">

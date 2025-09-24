@@ -28,7 +28,7 @@ $firstHalf = array_slice($teams, 0, $mid);
 $secondHalf = array_slice($teams, $mid);
 
 //halfTeamData($firstHalf, 0, $conn);
-//halfTeamData($secondHalf, 10, $conn);
+halfTeamData($secondHalf, 10, $conn);
 
 //getPlayerData($teams, $conn);
 
@@ -36,7 +36,7 @@ $secondHalf = array_slice($teams, $mid);
 //halfMatches(18, $conn);
 //halfMatches(35, $conn);
 
-getScorers($conn);
+//getScorers($conn);
 
 
 
@@ -146,7 +146,7 @@ function halfTeamData($arr, $half, $conn){
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
-        sleep(10.5);
+        sleep(11.4);
 }
     
 }

@@ -11,7 +11,7 @@ function Fixtures() {
               </h1>
               <h2 className="underline mb-2">Saturday, October 25</h2>
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -23,7 +23,7 @@ function Fixtures() {
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                   </div>
                 </li>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -35,7 +35,7 @@ function Fixtures() {
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                   </div>
                 </li>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -52,7 +52,7 @@ function Fixtures() {
               <h2 className="underline mb-2">Saturday, October 25</h2>
 
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -66,7 +66,7 @@ function Fixtures() {
                 </li>
               </ul>
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -87,7 +87,7 @@ function Fixtures() {
               </h1>
               <h2 className="underline mb-2">Saturday, October 25</h2>
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -99,7 +99,7 @@ function Fixtures() {
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                   </div>
                 </li>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -111,7 +111,7 @@ function Fixtures() {
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                   </div>
                 </li>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -128,7 +128,7 @@ function Fixtures() {
               <h2 className="underline mb-2">Saturday, October 25</h2>
 
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 s shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
@@ -142,7 +142,7 @@ function Fixtures() {
                 </li>
               </ul>
               <ul>
-                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2">
+                <li className="bg-slate-950 ml-3 mr-3 mb-2 rounded-md pl-2 pr-2 shadow-md black">
                   <div className="flex flex-row justify-between items-center">
                     <img className="h-8" src="public/premierleaguelogoimages.jpg" />
                     <p>Chelsea</p>
