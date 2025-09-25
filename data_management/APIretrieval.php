@@ -28,16 +28,15 @@ $firstHalf = array_slice($teams, 0, $mid);
 $secondHalf = array_slice($teams, $mid);
 
 //halfTeamData($firstHalf, 0, $conn);
-halfTeamData($secondHalf, 10, $conn);
+//halfTeamData($secondHalf, 10, $conn);
 
 //getPlayerData($teams, $conn);
 
 //halfMatches(1, $conn);
-//halfMatches(18, $conn);
-//halfMatches(35, $conn);
+//halfMatches(19, $conn);
+//halfMatches(37, $conn);
 
-//getScorers($conn);
-
+getScorers($conn);
 
 
 
@@ -197,7 +196,7 @@ function getPlayerData($arr, $conn){
 
 
 
-        sleep(5.5);
+        sleep(5.9);
     }
 }
 
@@ -300,7 +299,6 @@ function halfMatches($initial, $conn){
     }
 
 }
-
 
 function getScorers($conn){
     $reqPrefs['http']['method'] = 'GET';
