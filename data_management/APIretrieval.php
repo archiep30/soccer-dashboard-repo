@@ -36,7 +36,7 @@ $secondHalf = array_slice($teams, $mid);
 //halfMatches(19, $conn);
 //halfMatches(37, $conn);
 
-getScorers($conn);
+//getScorers($conn);
 
 
 
