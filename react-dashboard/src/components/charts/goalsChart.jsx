@@ -44,10 +44,25 @@ export default function GoalsChart({ players, goals }) {
     responsive: true,
     plugins: { legend: { display: false } },
     scales: {
-      y: { beginAtZero: true, ticks: { color: "white" } },
-      x: { ticks: { color: "white" } }
+      y: { beginAtZero: true, ticks: { color: "white" }, 
+    grid: {
+        display: true,
+        color: 'rgba(230, 230, 230, 0.2)',
+        lineWidth: 1, 
+        drawOnChartArea: true,
+        drawTicks: true,
+      }, },
+      x: { ticks: { color: "white" },
+    grid: {
+        display: false, 
+        color: 'rgba(230, 230, 230, 0.2)', 
+        lineWidth: 1, 
+        drawOnChartArea: true, 
+        drawTicks: true,
+      }, }
+      
     }
   };
 
-  return <Bar className="bg-slate-950 w-100 p-1 mt-6 rounded-md h-full" data={data} options={options} />;
+  return <Bar className=" h-full" data={data} options={options} />;
 }

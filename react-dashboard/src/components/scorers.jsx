@@ -12,7 +12,7 @@ function TopScorerData() {
     fetch("http://localhost/soccer-dashboard/data_management/endpoints/getTopScorers.php")
       .then(res => res.json())
       .then(data => {
-        console.log("API Response:", data);  // 👈 check this in browser console
+        console.log("API Response:", data);
         setScorers(data);
     })
       .catch(err => console.error("Error fetching top scorers:", err));

@@ -27,7 +27,7 @@ function Dashboard() {
 
       <div className="flex-[.5] flex justify-center items-center">
         <form action="/search" className="text-center text-2xl w-full ">
-          <input className="bg-slate-950 rounded-xl border-gray-400 border-solid border-2 p-6" inputMode="search" placeholder="search players"/>
+          <input className="bg-slate-950 rounded-xl border-gray-400 border-solid border-2 p-4" inputMode="search" placeholder="search players"/>
         </form>
       </div>
 
