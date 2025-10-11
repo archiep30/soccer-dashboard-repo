@@ -7,7 +7,7 @@ function StandingsData() {
     fetch("http://localhost/soccer-dashboard/data_management/endpoints/getTeams.php")
       .then(res => res.json())
       .then(data => {
-        console.log("API Response:", data);  // 👈 check this in browser console
+        console.log("API Response:", data);
         setStandings(data);
     })
       .catch(err => console.error("Error fetching standings:", err));

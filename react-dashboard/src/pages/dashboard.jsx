@@ -2,6 +2,7 @@ import FixturesResultsToggle from "../components/gameSwitch";
 import StandingsData from "../components/standings";
 import TopScorerData from "../components/scorers";
 import Chart from "../components/charts/charts";
+import BasicExample from "../components/teamDropdown";
 
 
 
@@ -26,9 +27,7 @@ function Dashboard() {
       </div>
 
       <div className="flex-[.5] flex justify-center items-center">
-        <form action="/search" className="text-center text-2xl w-full ">
-          <input className="bg-slate-950 rounded-xl border-gray-400 border-solid border-2 p-4" inputMode="search" placeholder="search players"/>
-        </form>
+        <BasicExample/>
       </div>
 
     </div>
