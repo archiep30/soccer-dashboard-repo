@@ -3,7 +3,7 @@ import FixturesData from "./fixtures";
 import ResultsData from "./results";
 
 function FixturesResultsToggle() {
-  const [activeTab, setActiveTab] = useState("fixtures"); // default tab
+  const [activeTab, setActiveTab] = useState("fixtures");
 
   return (
     <div className="w-full h-full p-4 flex flex-col flex-grow">

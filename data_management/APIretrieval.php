@@ -2,13 +2,7 @@
 <?php
     echo 'AASDHABHCBAEJHCBAEEEEEEEEEEEEEEEEEEEEEEEEEEEKH';
 
-    $uri = 'https://api.football-data.org/v4/competitions/PL/scorers';
-    $reqPrefs['http']['method'] = 'GET';
-    $reqPrefs['http']['header'] = 'X-Auth-Token: 6b7c016d1bd54d7683d4a1f5ec148dcb';
-    $stream_context = stream_context_create($reqPrefs);
-    $response = file_get_contents($uri, false, $stream_context);
-    $data = json_decode($response, true);
-    var_dump($data);
+    
 
     $conn = new mysqli("localhost", "root", "", "soccerdb");
     if ($conn->connect_error) {
@@ -33,8 +27,8 @@ $secondHalf = array_slice($teams, $mid);
 //getPlayerData($teams, $conn);
 
 //halfMatches(1, $conn);
-//halfMatches(18, $conn);
-//halfMatches(35, $conn);
+//halfMatches(17, $conn);
+//halfMatches(34, $conn);
 
 getScorers($conn);
 
@@ -145,7 +139,7 @@ function halfTeamData($arr, $half, $conn){
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
-        sleep(10.7);
+        sleep(10.02);
 }
     
 }
