@@ -1,6 +1,5 @@
 -- Active: 1757634405710@@127.0.0.1@3306
 <?php
-<<<<<<< HEAD:data_management/endpoints/APIretrieval.php
     require __DIR__ . '/vendor/autoload.php';
 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -13,10 +12,7 @@
     $apiKey = $_ENV['FOOTBALL_API_KEY'];
 
     $conn = new mysqli("$servername", "$username", "$password", "$dbname");
-=======
    
-    $conn = new mysqli("localhost", "root", "", "soccerdb");
->>>>>>> 6123f1f11d772404f45929cdcfaf75907c55f851:data_management/APIretrieval.php
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
