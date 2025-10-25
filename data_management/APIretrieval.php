@@ -1,9 +1,6 @@
 -- Active: 1757634405710@@127.0.0.1@3306
 <?php
-    echo 'AASDHABHCBAEJHCBAEEEEEEEEEEEEEEEEEEEEEEEEEEEKH';
-
-    
-
+   
     $conn = new mysqli("localhost", "root", "", "soccerdb");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
