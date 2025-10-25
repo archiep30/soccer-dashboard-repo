@@ -1,8 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root";  
-$password = "";      
-$dbname = "soccerdb";
+
+require __DIR__ . '/vendor/autoload.php';  // required once
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$servername = $_ENV['DB_SERVER'];
+$username   = $_ENV['DB_USER'];
+$password   = $_ENV['DB_PASS'];
+$dbname     = $_ENV['DB_NAME'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
