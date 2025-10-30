@@ -11,11 +11,14 @@
     $dbname = $_ENV['DB_NAME'];
     $apiKey = $_ENV['FOOTBALL_API_KEY'];
 
-    $conn = new mysqli("$servername", "$username", "$password", "$dbname");
+    $conn = new mysqli($servername, $username, $password, $dbname);
    
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+
+    $reqPrefs['http']['header'] = "X-Auth-Token: $apiKey";
+
     
 $teams = [64, 61, 57, 73, 62, 71, 1044, 354, 66, 351, 
           397, 341, 65, 328, 402, 563, 67, 63, 58, 76]; 
@@ -24,31 +27,30 @@ $mid = (count($teams) / 2);
 $firstHalf = array_slice($teams, 0, $mid);
 $secondHalf = array_slice($teams, $mid);
 
-//halfTeamData($firstHalf, 0, $conn);
-//halfTeamData($secondHalf, 10, $conn);
+//halfTeamData($firstHalf, 0, $conn, $apiKey);
+//halfTeamData($secondHalf, 10, $conn, $apiKey);
 
-//getPlayerData($teams, $conn);
+//getPlayerData($teams, $conn, $apiKey);
 
-//halfMatches(1, $conn);
-//halfMatches(17, $conn);
-//halfMatches(34, $conn);
+//halfMatches(1, $conn, $apiKey);
+//halfMatches(17, $conn, $apiKey);
+//halfMatches(33, $conn, $apiKey);
 
-getScorers($conn);
+getScorers($conn, $apiKey);
 
-function halfTeamData($arr, $half, $conn){
+function halfTeamData($arr, $half, $conn, $apiKey){
 
     foreach ($arr as $id) {
         $index = array_search($id, $arr)+$half;
         //$index;
         $uri = 'https://api.football-data.org/v4/competitions/PL/standings';
         $reqPrefs['http']['method'] = 'GET';
-        $reqPrefs['http']['header'] = 'X-Auth-Token: $apikey';
+        $reqPrefs['http']['header'] = "X-Auth-Token: $apiKey";
         $stream_context = stream_context_create($reqPrefs);
         $response = file_get_contents($uri, false, $stream_context);
         $data = json_decode($response, true);
 
         $table = $data['standings'][0]['table'][$index];
-
 
         
 
@@ -146,13 +148,13 @@ function halfTeamData($arr, $half, $conn){
 }
 
 
-function getPlayerData($arr, $conn){
+function getPlayerData($arr, $conn, $apiKey){
     foreach($arr as $id){
 
         $index = array_search($id, $arr);
 
         $reqPrefs['http']['method'] = 'GET';
-        $reqPrefs['http']['header'] = 'X-Auth-Token: $apikey';
+        $reqPrefs['http']['header'] = "X-Auth-Token: $apiKey";
         $stream_context = stream_context_create($reqPrefs);
         $uri = 'https://api.football-data.org/v4/teams/';
         $uri .= $id;
@@ -196,7 +198,7 @@ function getPlayerData($arr, $conn){
 }
 
 
-function halfMatches($initial, $conn){
+function halfMatches($initial, $conn, $apiKey){
 
     for($i=$initial; $i<=38; $i++){
         echo '<br>';
@@ -204,7 +206,7 @@ function halfMatches($initial, $conn){
 
 
         $reqPrefs['http']['method'] = 'GET';
-        $reqPrefs['http']['header'] = 'X-Auth-Token: $apikey';
+        $reqPrefs['http']['header'] = "X-Auth-Token: $apiKey";
         $stream_context = stream_context_create($reqPrefs);
          $uri = 'https://api.football-data.org/v4/competitions/PL/matches?matchday=';
         $uri .= $i;
@@ -295,9 +297,9 @@ function halfMatches($initial, $conn){
 
 }
 
-function getScorers($conn){
+function getScorers($conn, $apiKey){
     $reqPrefs['http']['method'] = 'GET';
-    $reqPrefs['http']['header'] = 'X-Auth-Token: $apikey';
+    $reqPrefs['http']['header'] = "X-Auth-Token: $apiKey";
     $stream_context = stream_context_create($reqPrefs);
     $uri = 'https://api.football-data.org/v4/competitions/PL/scorers';
     $response = file_get_contents($uri, false, $stream_context);
